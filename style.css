@@ -1,3 +1,83 @@
+:root {
+    /* Colors */
+    --nude: #ffdeeb;
+    --nude-dark: #fcc2d7;
+    --hair-brown: #3d2314;
+    --eye-brown: #785239;
+}
+
 *, *::after, *::before {
     box-sizing: border-box;
+    margin: 0;
+}
+
+.steliyan {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(to left, #bac8ff, #91a7ff);
+    height: 100vh;
+    width: 100vw;
+}
+
+
+/* HEAD */
+.head {
+    position: relative;
+
+    height: 12rem;
+    width: 10rem;
+    background-color: var(--nude);
+    border-radius: 40% 40% 60% 60%;
+
+    margin-bottom: 2rem;
+} 
+
+.eyes {
+    display: flex;
+    justify-content: center;
+
+    gap: 2rem;
+
+    margin-top: 4rem;
+}
+
+.eye {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    width: 2.5rem;
+    height: 1.4rem;
+    background-color: #fff;
+    border-top: 3px solid var(--nude-dark);
+    border-bottom: 2px solid var(--nude-dark);
+
+    border-radius: 50%;
+}
+
+.pupil {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 1.2rem;
+    height: 1.2rem;
+    background: conic-gradient(var(--eye-brown) 270deg, #bbb  320deg, var(--eye-brown) 360deg);
+    border-radius: 100%;
+
+    margin-left: 0.3rem;
+}
+
+.pupil::after, .pupil::before {
+    position: absolute;
+    content: '';
+    width: 0.45rem;
+    height: 0.45rem;
+    background-color: #111;
+    border-radius: 100%;
+
+   margin-left: 0.3rem;
 }
