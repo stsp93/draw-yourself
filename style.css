@@ -1,83 +1,178 @@
 :root {
-    /* Colors */
-    --nude: #ffdeeb;
-    --nude-dark: #fcc2d7;
-    --hair-brown: #3d2314;
-    --eye-brown: #785239;
+  /* Colors */
+  --nude: #ffdeeb;
+  --nude-dark: #fcc2d7;
+  --hair-brown: #3d2314;
+  --eye-brown: #785239;
+  --gray: #111;
 }
 
-*, *::after, *::before {
-    box-sizing: border-box;
-    margin: 0;
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
 }
 
 .steliyan {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    background: linear-gradient(to left, #bac8ff, #91a7ff);
-    height: 100vh;
-    width: 100vw;
+  background: linear-gradient(to left, #bac8ff, #91a7ff);
+  height: 100vh;
+  width: 100vw;
 }
 
-
-/* HEAD */
+/* 1. HEAD */
 .head {
-    position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    height: 12rem;
-    width: 10rem;
-    background-color: var(--nude);
-    border-radius: 40% 40% 60% 60%;
+  position: relative;
 
-    margin-bottom: 2rem;
-} 
+  height: 12rem;
+  width: 9rem;
+  background-color: var(--nude);
+  border-radius: 40% 40% 50% 50%;
 
-.eyes {
-    display: flex;
-    justify-content: center;
+  margin-bottom: 2rem;
+}
 
-    gap: 2rem;
+/* 1.1 EYES */
 
-    margin-top: 4rem;
+.eyes,
+.brows {
+  position: absolute;
+
+  display: flex;
+  justify-content: center;
+  gap: 1.7rem;
+
+  margin-bottom: 3rem;
 }
 
 .eye {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 
-    width: 2.5rem;
-    height: 1.4rem;
-    background-color: #fff;
-    border-top: 3px solid var(--nude-dark);
-    border-bottom: 2px solid var(--nude-dark);
+  width: 2.5rem;
+  height: 1.3rem;
+  background-color: #fff;
+  border-top: 3px solid var(--nude-dark);
+  border-bottom: 2px solid var(--nude-dark);
 
-    border-radius: 50%;
+  border-radius: 60% 60% 50% 50%;
+
+  z-index: 2;
+}
+
+.brows {
+    margin-bottom: 4.5rem;
+}
+
+.brow {
+  width: 2.5rem;
+  height: 1.2rem;
+  border-top: 0.4rem solid var(--hair-brown);
+  border-radius: 40% 20% 0% 0%;
+}
+
+.brow:last-child {
+    border-radius: 20% 40% 0% 0%;
 }
 
 .pupil {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    width: 1.2rem;
-    height: 1.2rem;
-    background: conic-gradient(var(--eye-brown) 270deg, #bbb  320deg, var(--eye-brown) 360deg);
-    border-radius: 100%;
+  width: 1.2rem;
+  height: 1.2rem;
+  background: conic-gradient(
+    var(--eye-brown) 270deg,
+    #bbb 320deg,
+    var(--eye-brown) 360deg
+  );
+  border-radius: 100%;
 
-    margin-left: 0.3rem;
+  margin-left: 0.3rem;
 }
 
-.pupil::after, .pupil::before {
-    position: absolute;
-    content: '';
-    width: 0.45rem;
-    height: 0.45rem;
-    background-color: #111;
-    border-radius: 100%;
+.pupil::after,
+.pupil::before {
+  position: absolute;
+  content: "";
+  width: 0.45rem;
+  height: 0.45rem;
+  background-color: var(--gray);
+  border-radius: 100%;
 
-   margin-left: 0.3rem;
+  margin-left: 0.3rem;
+}
+
+/* 1.2 NOSE */
+
+.nose {
+  width: 0.3rem;
+  height: 3rem;
+  background-color: var(--nude-dark);
+  border-radius: 25%;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(0%, -40%);
+}
+
+/* nostrils */
+
+.nose::before,
+.nose::after {
+  content: "";
+
+  position: absolute;
+  height: 1rem;
+  width: 1rem;
+  background-color: var(--nude);
+  bottom: 0;
+  border-radius: 100%;
+  border-top: 0.2rem solid var(--nude-dark);
+
+  transform: translate(20%, 40%);
+}
+
+.nose::after {
+  transform: translate(-80%, 40%);
+}
+
+/* 1.3 MOUTH */
+    /* height can be used for animation  */
+.mouth {
+    width: 4rem;
+    height: 1.5rem;
+    background-color: var(--gray);
+
+    border-radius: 100% 100% 10rem 10rem;
+    border-bottom:0.3rem solid var(--nude-dark) ;
+    border-top:0.2rem solid var(--nude-dark) ;
+
+    margin-top: 7rem;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.teeth {
+     display: flex;
+     justify-content: center;
+     gap: 0.1rem;
+
+}
+.tooth {
+    width: 0.8rem;
+    height: 0.6rem;
+    background-color: #fff;
 }
