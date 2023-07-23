@@ -358,7 +358,7 @@ html {
 
 }
 
-/* 1.2 HANDS */
+/* 1.2 ARMS */
 
 .arms {
   position: absolute;
@@ -378,18 +378,20 @@ html {
 
   transform-origin: 50% 20%;
   transform: rotateZ(15deg);
-
 }
 
-.arm:last-of-type {
+.arm:last-child {
   transform: rotateZ(-15deg);
 }
+
+/* 1.2.1 FOREARMS */
 
 .forearm {
   width: 2.5rem;
   height: 8rem;
   background-color: var(--nude);
   border-radius: 1.5rem;
+  border-top: 0.7rem solid black;
 
   margin-top: 8rem;
   margin-left: 0.7rem;
@@ -400,4 +402,32 @@ html {
 
 .left-forearm {
   transform: rotateZ(-10deg);
+}
+
+/* 1.2.2 HANDS */
+
+.hand {
+  position: relative;
+  width: 3rem;
+  height: 3rem;
+  background-color: red;
+  border-radius: 1rem 1rem 100% 100%;
+  
+  top: 90%;
+  left: -8%;
+}
+
+.thumb {
+  position: relative;
+  width: 2rem;
+  height: 1rem;
+  border-radius: 1rem;
+  background-color: #111;
+
+  left: 0%;
+  transform: translate(-50%,0);
+}
+
+.left-thumb {
+  left: 100%;
 }
