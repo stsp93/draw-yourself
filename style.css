@@ -358,3 +358,29 @@ html {
 
 }
 
+/* 1.2 HANDS */
+
+.arms {
+  position: absolute;
+
+  display: flex;
+  gap: 7rem;
+
+  margin-bottom: 10rem;
+}
+
+.arm {
+  width: 4rem;
+  height: 10rem;
+  background-color: rgb(125, 57, 193);
+
+  border-radius: 5rem;
+
+  transform-origin: 50% 20%;
+  transform: rotateZ(10deg);
+
+}
+
+.arm:last-of-type {
+  transform: rotateZ(-10deg);
+}
