@@ -202,7 +202,7 @@ html {
 /* height from 0.7 to 2.5 */
 .mouth {
   width: 4rem;
-  height: 1.2rem;
+  height: 2rem;
   background-color: var(--gray);
 
   border-radius: 100% 100% 10rem 10rem;
@@ -272,7 +272,7 @@ html {
 
 /* 1.6 CHIN */
 .head::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 2.5rem;
   height: 1.5rem;
@@ -282,7 +282,6 @@ html {
   border-radius: 1rem;
 
   margin-top: 11.5rem;
-
 }
 
 /* 1.7 NECK */
@@ -314,13 +313,12 @@ html {
   width: 11rem;
   /* TODO root colors for body - main, main-darker, main-darkest */
   background-color: rebeccapurple;
-  border-radius: 25%  ;
+  border-radius: 25%;
 
   margin-top: 8rem;
 
   z-index: 9;
 }
-
 
 /* 2.1 NECK */
 
@@ -332,7 +330,6 @@ html {
 
   margin-bottom: 17rem;
 }
-
 
 /* 1.2 ARMS */
 
@@ -350,7 +347,7 @@ html {
   height: 10rem;
   background-color: rgb(125, 57, 193);
 
-border-bottom: 1rem solid black;
+  border-bottom: 1rem solid black;
   border-radius: 2rem;
 
   transform-origin: 50% 20%;
@@ -389,7 +386,7 @@ border-bottom: 1rem solid black;
   height: 3rem;
   background-color: red;
   border-radius: 1rem 1rem 100% 100%;
-  
+
   top: 90%;
   left: -8%;
 }
@@ -402,9 +399,39 @@ border-bottom: 1rem solid black;
   background-color: #111;
 
   left: 0%;
-  transform: translate(-50%,0);
+  transform: translate(-50%, 0);
 }
 
 .left-thumb {
   left: 100%;
+}
+
+/* 3. LEGS */
+
+.legs {
+  position: absolute;
+  margin-top: 35rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.leg {
+  display: flex;
+  justify-content: center;
+  width: 3.5rem;
+  height: 17rem;
+  background-color: red;
+  border-radius:0 0 35% 35%;
+}
+
+.foot {
+  position: absolute;
+  width: 4rem;
+  height: 2rem;
+  top: 90%;
+  background-color: #fff;
+
+  border: 1rem solid black;
+  border-bottom: 0.2rem solid black;
+  border-radius: 1rem 1rem 0 0;
 }
