@@ -374,13 +374,30 @@ html {
   height: 10rem;
   background-color: rgb(125, 57, 193);
 
-  border-radius: 5rem;
+  border-radius: 2rem;
 
   transform-origin: 50% 20%;
-  transform: rotateZ(10deg);
+  transform: rotateZ(15deg);
 
 }
 
 .arm:last-of-type {
+  transform: rotateZ(-15deg);
+}
+
+.forearm {
+  width: 2.5rem;
+  height: 8rem;
+  background-color: var(--nude);
+  border-radius: 1.5rem;
+
+  margin-top: 8rem;
+  margin-left: 0.7rem;
+
+  transform-origin: 50% 0;
+  transform: rotateZ(10deg);
+}
+
+.left-forearm {
   transform: rotateZ(-10deg);
 }
