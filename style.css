@@ -310,12 +310,13 @@ html {
   justify-content: center;
 
   position: absolute;
-  height: 20rem;
+  height: 17rem;
   width: 11rem;
+  /* TODO root colors for body - main, main-darker, main-darkest */
   background-color: rebeccapurple;
   border-radius: 25%  ;
 
-  margin-top: 10rem;
+  margin-top: 8rem;
 
   z-index: 9;
 }
@@ -332,31 +333,6 @@ html {
   margin-bottom: 17rem;
 }
 
-.neck::before {
-  position: absolute;
-  content: '';
-  height: 2.7rem;
-  width: 1rem;
-  background-color: var(--nude-dark);
-
-  margin-left: -0.2rem;
-
-  transform: rotateZ(-30deg);
-
-}
-
-.neck::after {
-  position: absolute;
-  content: '';
-  height: 2.7rem;
-  width: 1rem;
-  background-color: var(--nude-dark);
-
-  margin-left: 2.2rem;
-
-  transform: rotateZ(30deg);
-
-}
 
 /* 1.2 ARMS */
 
@@ -366,7 +342,7 @@ html {
   display: flex;
   gap: 7rem;
 
-  margin-bottom: 10rem;
+  margin-bottom: 7rem;
 }
 
 .arm {
@@ -374,10 +350,11 @@ html {
   height: 10rem;
   background-color: rgb(125, 57, 193);
 
+border-bottom: 1rem solid black;
   border-radius: 2rem;
 
   transform-origin: 50% 20%;
-  transform: rotateZ(15deg);
+  transform: rotateZ(5deg);
 }
 
 .arm:last-child {
