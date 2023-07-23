@@ -228,8 +228,13 @@
   height: 0.6rem;
   width: 1.5rem;
 
-  border-bottom-right-radius: 0.05rem;
-  border-bottom-left-radius: 0.05rem;
+  border-bottom-right-radius: 0.2rem;
+  border-bottom-left-radius: 0.2rem;
+}
+/* Accent */
+.tooth:nth-child(4) {
+  border-radius: 0.05rem;
+  height: 0.56rem;
 }
 
 /* 1.5 HAIR */
