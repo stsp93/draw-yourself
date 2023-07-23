@@ -22,7 +22,6 @@
   background: linear-gradient(to left, #bac8ff, #91a7ff);
   height: 100vh;
   width: 100vw;
-
 }
 
 /* 1. HEAD */
@@ -38,7 +37,10 @@
   background-color: var(--nude);
   border-radius: 40% 40% 50% 50%;
 
-  margin-bottom: 2rem;
+
+  /* TODO margin-bottom: 20rem; Screen position */
+
+  z-index: 1;
 }
 
 /* 1.1 EYES */
@@ -49,13 +51,13 @@
 
   display: flex;
   justify-content: center;
-  gap: 1.7rem;
+  gap: 2rem;
 
   margin-bottom: 3rem;
 }
 
 .brows {
-    margin-bottom: 4.5rem;
+  margin-bottom: 3.2rem;
 }
 
 .brow {
@@ -66,7 +68,7 @@
 }
 
 .brow:last-child {
-    border-radius: 20% 40% 0% 0%;
+  border-radius: 20% 40% 0% 0%;
 }
 
 .eye {
@@ -75,23 +77,24 @@
   align-items: center;
   overflow: hidden;
 
-  width: 2.5rem;
-  height: 1.3rem;
+  width: 2rem;
+  height: 1.1rem;
   background-color: #fff;
-  border-top: 3px solid var(--nude-dark);
-  border-bottom: 2px solid var(--nude-dark);
+  border-top: 0.2rem solid var(--nude-dark);
+  border-bottom: 0.1rem solid var(--nude-dark);
 
   border-radius: 60% 60% 50% 50%;
-}
 
+  margin-top: 1rem;
+}
 
 .pupil {
   display: flex;
   justify-content: center;
   align-items: center;
 
-  width: 1.2rem;
-  height: 1.2rem;
+  width: 1.1rem;
+  height: 1rem;
   background: conic-gradient(
     var(--eye-brown) 270deg,
     #bbb 320deg,
@@ -100,6 +103,7 @@
   border-radius: 100%;
 
   margin-left: 0.3rem;
+  margin-bottom: 0.1rem;
 }
 
 .pupil::after {
@@ -113,15 +117,15 @@
 }
 
 .pupil::before {
-    position: absolute;
-    content: "";
-    width: 0.22rem;
-    height: 0.22rem;
-    background-color: #fff;
-    border-radius: 30%;
-  
-    margin-right: 0.1rem;
-    margin-bottom: 0.2rem;
+  position: absolute;
+  content: "";
+  width: 0.22rem;
+  height: 0.22rem;
+  background-color: #fff;
+  border-radius: 30%;
+
+  margin-right: 0.1rem;
+  margin-bottom: 0.2rem;
 }
 
 /* 1.2 NOSE */
@@ -162,95 +166,127 @@
 /* 1.3 EARS */
 
 .ears {
-    position: absolute;
+  position: absolute;
 }
 
 .ear {
-    height: 3rem;
-    width: 1rem;
-    background-color: var(--nude);
-    border: 0.2px solid var(--nude-dark);
+  height: 3rem;
+  width: 1rem;
+  background-color: var(--nude);
+  border: 0.2px solid var(--nude-dark);
 
-    border-radius: 0.3rem 0.7rem 40% 50%;
+  border-radius: 0.3rem 0.7rem 40% 50%;
 
-
-    transform: translate(-4.6rem, 1.2rem) rotateY(50deg);
+  transform: translate(-4.6rem, 1.2rem) rotateY(50deg);
 }
 .ear:first-child {
-    border-right: none;
+  border-right: none;
 }
 
 .ear:last-child {
-    border-radius: 0.7rem 0.3rem 50% 40%;
+  border-radius: 0.7rem 0.3rem 50% 40%;
 
-    border-left: none;
+  border-left: none;
 
-    transform: translate(4.6rem, -1.6rem) rotateY(50deg);
+  transform: translate(4.6rem, -1.6rem) rotateY(50deg);
 }
 
 /* 1.4 MOUTH */
-    /* height/ width breakpoints  */
-    /* height 0.7 - closed */
-    /* width from 3rem to 4 rem */
-    /* height from 0.7 to 2.5 */
+/* height/ width breakpoints  */
+/* height 0.7 - closed */
+/* width from 3rem to 4 rem */
+/* height from 0.7 to 2.5 */
 .mouth {
-    width: 4rem;
-    height: 2rem;
-    background-color: var(--gray);
+  width: 4rem;
+  height: 2rem;
+  background-color: var(--gray);
 
-    border-radius: 100% 100% 10rem 10rem;
-    border-bottom:0.6rem solid var(--nude-dark) ;
-    border-top:0.2rem solid var(--nude-dark) ;
+  border-radius: 100% 100% 10rem 10rem;
+  border-bottom: 0.6rem solid var(--nude-dark);
+  border-top: 0.2rem solid var(--nude-dark);
 
-    margin-top: 7rem;
-    overflow: hidden;
+  margin-top: 7rem;
+  overflow: hidden;
 }
 
 .teeth {
-     display: flex;
-     justify-content: center;
-     gap: 0.1rem;
-
+  display: flex;
+  justify-content: center;
+  gap: 0.1rem;
 }
 .tooth {
-    width: 1rem;
-    height: 0.5rem;
-    background-color: #fff;
+  width: 1rem;
+  height: 0.5rem;
+  background-color: #fff;
 
-    border-bottom-right-radius: 0.1rem;
-    border-bottom-left-radius: 0.1rem;
+  border-bottom-right-radius: 0.1rem;
+  border-bottom-left-radius: 0.1rem;
 }
 
-.tooth:nth-child(3), .tooth:nth-child(4) {
-    height: 0.6rem;
-    width: 1.5rem;
+.tooth:nth-child(3),
+.tooth:nth-child(4) {
+  height: 0.6rem;
+  width: 1.5rem;
 
-    border-bottom-right-radius: 0.05rem;
-    border-bottom-left-radius: 0.05rem;
+  border-bottom-right-radius: 0.05rem;
+  border-bottom-left-radius: 0.05rem;
 }
 
 /* 1.5 HAIR */
 
 .hair {
-    position: absolute;
-    width: 8.8rem;
-    height: 10rem;
-    border-top: 2em solid var(--hair-brown);
-    border-radius: 100% 100% 0 0;
+  position: absolute;
+  width: 8.7rem;
+  height: 10rem;
+  border-top: 2em solid var(--hair-brown);
+  border-radius: 100% 100% 0 0;
 
-    margin-bottom: 5rem;
-
+  margin-bottom: 5rem;
 }
 
 .hair::after {
-    position: absolute;
-    content: '';
-    height: 2rem;
-    width: 5.5rem;
-    background-color: var(--hair-brown);
+  position: absolute;
+  content: "";
+  height: 2rem;
+  width: 5.2rem;
+  background-color: var(--hair-brown);
 
-    border-radius: 100% 10% 20% 0%;
-transform: rotateZ(-7deg) translateY(-50%);
+  border-radius: 100% 10% 20% 0%;
+  transform: rotateZ(-7deg) translateY(-50%);
 
-    margin-left: 1.5rem;
+  margin-left: 1.5rem;
 }
+
+/* 1.6 CHIN */
+.head::after {
+  content: '';
+  position: absolute;
+  width: 2.5rem;
+  height: 1.5rem;
+  background-color: var(--nude);
+  border-top: 0.2rem solid var(--nude-dark);
+
+  border-radius: 1rem;
+
+  margin-top: 11.5rem;
+
+}
+
+/* 1.7 NECK */
+
+/* TODO BACKUP */
+
+/* .head::before {
+  content: '';
+  position: absolute;
+  width: 7rem;
+  height: 5rem;
+  background-color: red;
+
+  margin-top: 14rem;
+
+  border-left: 1rem solid #000;
+  border-right: 1rem solid #000;
+} */
+
+/* 2.BODY */
