@@ -14,6 +14,10 @@
   margin: 0;
 }
 
+html {
+  font-size: 60%;
+}
+
 .steliyan {
   display: flex;
   align-items: center;
@@ -37,10 +41,9 @@
   background-color: var(--nude);
   border-radius: 40% 40% 50% 50%;
 
+  margin-bottom: 20rem;
 
-  /* TODO margin-bottom: 20rem; Screen position */
-
-  z-index: 1;
+  z-index: 10;
 }
 
 /* 1.1 EYES */
@@ -116,11 +119,12 @@
   margin-left: 0.3rem;
 }
 
+/* eye bright */
 .pupil::before {
   position: absolute;
   content: "";
-  width: 0.22rem;
-  height: 0.22rem;
+  width: 0.17rem;
+  height: 0.17rem;
   background-color: #fff;
   border-radius: 30%;
 
@@ -198,7 +202,7 @@
 /* height from 0.7 to 2.5 */
 .mouth {
   width: 4rem;
-  height: 2rem;
+  height: 1.2rem;
   background-color: var(--gray);
 
   border-radius: 100% 100% 10rem 10rem;
@@ -232,6 +236,10 @@
   border-bottom-left-radius: 0.2rem;
 }
 /* Accent */
+.tooth:nth-child(2) {
+  height: 0.45rem;
+}
+
 .tooth:nth-child(4) {
   border-radius: 0.05rem;
   height: 0.56rem;
@@ -295,3 +303,58 @@
 } */
 
 /* 2.BODY */
+
+.body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: absolute;
+  height: 20rem;
+  width: 11rem;
+  background-color: rebeccapurple;
+  border-radius: 25%  ;
+
+  margin-top: 10rem;
+
+  z-index: 9;
+}
+
+
+/* 2.1 NECK */
+
+.neck {
+  height: 3.1rem;
+  width: 3rem;
+  background-color: var(--nude-dark);
+  border-radius: 0 0 50% 50%;
+
+  margin-bottom: 17rem;
+}
+
+.neck::before {
+  position: absolute;
+  content: '';
+  height: 2.7rem;
+  width: 1rem;
+  background-color: var(--nude-dark);
+
+  margin-left: -0.2rem;
+
+  transform: rotateZ(-30deg);
+
+}
+
+.neck::after {
+  position: absolute;
+  content: '';
+  height: 2.7rem;
+  width: 1rem;
+  background-color: var(--nude-dark);
+
+  margin-left: 2.2rem;
+
+  transform: rotateZ(30deg);
+
+}
+
