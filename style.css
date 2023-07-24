@@ -4,6 +4,9 @@
   --nude-dark: #fcc2d7;
   --hair-brown: #3d2314;
   --eye-brown: #785239;
+  --body:#fcc419;
+  --body-darker:#f59f00;
+  --body-darkest:#e67700;
   --gray: #111;
 }
 
@@ -284,23 +287,6 @@ html {
   margin-top: 11.5rem;
 }
 
-/* 1.7 NECK */
-
-/* TODO BACKUP */
-
-/* .head::before {
-  content: '';
-  position: absolute;
-  width: 7rem;
-  height: 5rem;
-  background-color: red;
-
-  margin-top: 14rem;
-
-  border-left: 1rem solid #000;
-  border-right: 1rem solid #000;
-} */
-
 /* 2.BODY */
 
 .body {
@@ -309,13 +295,12 @@ html {
   justify-content: center;
 
   position: absolute;
-  height: 17rem;
-  width: 11rem;
-  /* TODO root colors for body - main, main-darker, main-darkest */
-  background-color: rebeccapurple;
-  border-radius: 25%;
+  height: 15rem;
+  width: 10rem;
+  background-color: var(--body);
+  border-radius: 25% 25% 1rem 1rem;
 
-  margin-top: 8rem;
+  margin-top: 6rem;
 
   z-index: 9;
 }
@@ -324,11 +309,11 @@ html {
 
 .neck {
   height: 3.1rem;
-  width: 3rem;
+  width: 4rem;
   background-color: var(--nude-dark);
   border-radius: 0 0 50% 50%;
 
-  margin-bottom: 17rem;
+  margin-bottom: 14rem;
 }
 
 /* 1.2 ARMS */
@@ -339,23 +324,27 @@ html {
   display: flex;
   gap: 7rem;
 
-  margin-bottom: 7rem;
+  margin-bottom: 5rem;
 }
 
 .arm {
   width: 4rem;
   height: 10rem;
-  background-color: rgb(125, 57, 193);
+  background-color: var(--body);
+  border-left: 0.3rem solid var(--body-darker);
 
-  border-bottom: 1rem solid black;
+  border-bottom: 1rem solid var(--body-darkest);
   border-radius: 2rem;
 
   transform-origin: 50% 20%;
-  transform: rotateZ(5deg);
+  transform: rotateZ(135deg);
 }
 
 .arm:last-child {
   transform: rotateZ(-15deg);
+  border-left:none;
+  border-right: 0.3rem solid var(--body-darker);
+
 }
 
 /* 1.2.1 FOREARMS */
@@ -365,7 +354,7 @@ html {
   height: 8rem;
   background-color: var(--nude);
   border-radius: 1.5rem;
-  border-top: 0.7rem solid black;
+  border-top: 0.7rem solid var(--body-darker);
 
   margin-top: 8rem;
   margin-left: 0.7rem;
@@ -384,9 +373,9 @@ html {
   position: relative;
   width: 3rem;
   height: 3rem;
-  background-color: red;
+  background-color: var(--nude);
   border-radius: 1rem 1rem 100% 100%;
-
+  
   top: 90%;
   left: -8%;
 }
@@ -396,7 +385,7 @@ html {
   width: 2rem;
   height: 1rem;
   border-radius: 1rem;
-  background-color: #111;
+  background-color: var(--nude-dark);
 
   left: 0%;
   transform: translate(-50%, 0);
@@ -412,15 +401,15 @@ html {
   position: absolute;
   margin-top: 35rem;
   display: flex;
-  gap: 0.5rem;
+  gap: 0.104rem;
 }
 
 .leg {
   display: flex;
   justify-content: center;
-  width: 3.5rem;
+  width: 3.7rem;
   height: 17rem;
-  background-color: red;
+  background-color: #364fc7;
   border-radius:0 0 35% 35%;
 }
 
