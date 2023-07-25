@@ -81,7 +81,8 @@ button {
 
   z-index: 30;
 
-  animation: popup-stretch 4s 1;
+  animation: popup-stretch 4s ;
+  animation-timing-function: linear;
 }
 
 /* 1.1 EYES */
