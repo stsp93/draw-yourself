@@ -241,16 +241,6 @@ html {
   border-bottom-right-radius: 0.2rem;
   border-bottom-left-radius: 0.2rem;
 }
-/* Accent */
-.tooth:nth-child(2) {
-  height: 0.45rem;
-}
-
-.tooth:nth-child(4) {
-  border-radius: 0.05rem;
-  height: 0.56rem;
-}
-
 /* 1.5 HAIR */
 
 .hair {
@@ -340,13 +330,21 @@ html {
   border-radius: 2rem;
 
   transform-origin: 50% 20%;
-  transform: rotateZ(135deg);
+  transform: rotateZ(15deg);
+
 }
 
 .arm:last-child {
   transform: rotateZ(-15deg);
   border-left: none;
   border-right: 0.3rem solid var(--body-darker);
+}
+
+.arm:last-child:hover {
+  animation: wave-left 2s 1 ease-in-out;
+}
+.arm:first-child:hover {
+  animation: wave-right 2s 1 ease-in-out;
 }
 
 /* 1.2.1 FOREARMS */
@@ -463,4 +461,32 @@ html {
     height: 0;
   }
 
+}
+
+@keyframes wave-left {
+  0%, 100% {
+    transform: rotateZ(-15deg);
+  }
+
+  40%, 60%, 80% {
+    transform: rotateZ(-160deg);
+  }
+
+  50%, 70% {
+    transform: rotateZ(-140deg);
+  }
+}
+
+@keyframes wave-right {
+  0%, 100% {
+    transform: rotateZ(15deg);
+  }
+
+  40%, 60%, 80% {
+    transform: rotateZ(160deg);
+  }
+
+  50%, 70% {
+    transform: rotateZ(140deg);
+  }
 }
