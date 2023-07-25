@@ -551,16 +551,8 @@ button {
     height: 0;
   }
 
-  25% {
-    width: 4rem;
+  15% {
     height: 3rem;
-  }
-  50% {
-   width:  8rem;
-  }
-
-  75% {
-    width:  12rem;
   }
 
   100% {
