@@ -25,7 +25,7 @@ button.addEventListener('click', function () {
 
     intervalId = setInterval(() => {
         popupEl.textContent += `${generateRandomChars(4)}  `;
-    }, 1000)
+    }, 500)
     popupEl.style.display = 'block';
 })
 
