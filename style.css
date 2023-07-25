@@ -81,7 +81,7 @@ button {
 
   z-index: 30;
 
-  animation: popup-stretch 3s 1;
+  animation: popup-stretch 4s 1;
 }
 
 /* 1.1 EYES */
@@ -551,20 +551,20 @@ button {
     height: 0;
   }
 
-  20% {
+  25% {
     width: 4rem;
     height: 4rem;
   }
-
-  40% {
+  50% {
    width:  8rem;
   }
 
-  60% {
+  75% {
     width:  12rem;
   }
-  80% {
-    width:  16rem;
+
+  100% {
+    width:  15rem;
   }
 
 }
@@ -580,5 +580,5 @@ button {
 }
 
 .talk {
-  animation: talk 4s 2 ease-in-out;
+  animation: talk 4s 1 ease-in-out;
 }
