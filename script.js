@@ -24,19 +24,37 @@ button.addEventListener('click', function () {
     mouthEl.classList.add('talk');
 
     intervalId = setInterval(() => {
-        popupEl.textContent += `${generateRandomChars(4)}  `;
+        popupEl.textContent += `${generateWord()}  `;
     }, 500)
     popupEl.style.display = 'block';
 })
 
-function generateRandomChars(charCount) {
-    const characters = 'qertyuiopasdfghjklzxcvbnm!@#$%^&';
-    let output = '';
-    for (let i = 0; i < charCount; i++) {
-        randomChar = characters.charAt(Math.floor(Math.random() * characters.length))
-        output += randomChar
-    }
-    return output
+function generateWord() {
+    const words = [
+        'apple',
+        'banana',
+        'car',
+        'dog',
+        'elephant',
+        'flower',
+        'guitar',
+        'house',
+        'island',
+        'jungle',
+        'kite',
+        'lemon',
+        'mountain',
+        'notebook',
+        'orange',
+        'of',
+        'to',
+        'from',
+        'go',
+        'is'
+    ];
+    
+    return words[(Math.floor(Math.random() * words.length))];
+
 }
 
 // Animationend listeners
