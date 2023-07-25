@@ -4,9 +4,9 @@
   --nude-dark: #fcc2d7;
   --hair-brown: #3d2314;
   --eye-brown: #785239;
-  --body:#fcc419;
-  --body-darker:#f59f00;
-  --body-darkest:#e67700;
+  --body: #fcc419;
+  --body-darker: #f59f00;
+  --body-darkest: #e67700;
   --gray: #111;
 }
 
@@ -88,8 +88,9 @@ html {
   background-color: #fff;
   border-top: 0.2rem solid var(--nude-dark);
   border-bottom: 0.1rem solid var(--nude-dark);
-
   border-radius: 60% 60% 50% 50%;
+
+  animation: blink 5s infinite ;
 
   margin-top: 1rem;
 }
@@ -123,9 +124,8 @@ html {
 }
 
 /* eye bright */
-.pupil::before {
+.eye-bright {
   position: absolute;
-  content: "";
   width: 0.17rem;
   height: 0.17rem;
   background-color: #fff;
@@ -133,6 +133,9 @@ html {
 
   margin-right: 0.1rem;
   margin-bottom: 0.2rem;
+
+  animation: blink-eye-bright 5s infinite ;
+
 }
 
 /* 1.2 NOSE */
@@ -342,9 +345,8 @@ html {
 
 .arm:last-child {
   transform: rotateZ(-15deg);
-  border-left:none;
+  border-left: none;
   border-right: 0.3rem solid var(--body-darker);
-
 }
 
 /* 1.2.1 FOREARMS */
@@ -375,7 +377,7 @@ html {
   height: 3rem;
   background-color: var(--nude);
   border-radius: 1rem 1rem 100% 100%;
-  
+
   top: 90%;
   left: -8%;
 }
@@ -410,7 +412,7 @@ html {
   width: 3.7rem;
   height: 17rem;
   background-color: #364fc7;
-  border-radius:0 0 35% 35%;
+  border-radius: 0 0 35% 35%;
 }
 
 .foot {
@@ -423,4 +425,42 @@ html {
   border: 1rem solid black;
   border-bottom: 0.2rem solid black;
   border-radius: 1rem 1rem 0 0;
+}
+
+/* Responsive */
+
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 80%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  html {
+    font-size: 100%;
+  }
+}
+
+/* Animations */
+
+@keyframes blink {
+  45%, 55% {
+    height: 1.1rem;
+  }
+
+  50% {
+    height: 0.2rem;
+  }
+
+}
+
+@keyframes blink-eye-bright {
+  45%, 55% {
+    height: 0.17rem;
+  }
+
+  48%, 53% {
+    height: 0;
+  }
+
 }
