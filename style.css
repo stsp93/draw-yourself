@@ -124,7 +124,8 @@ html {
 }
 
 /* eye bright */
-.eye-bright {
+.pupil::before {
+  content: '';
   position: absolute;
   width: 0.17rem;
   height: 0.17rem;
@@ -340,12 +341,6 @@ html {
   border-right: 0.3rem solid var(--body-darker);
 }
 
-.arm:last-child:hover {
-  animation: wave-left 2s 1 ease-in-out;
-}
-.arm:first-child:hover {
-  animation: wave-right 2s 1 ease-in-out;
-}
 
 /* 1.2.1 FOREARMS */
 
@@ -442,7 +437,7 @@ html {
 /* Animations */
 
 @keyframes blink {
-  45%, 55% {
+  48%, 52% {
     height: 1.1rem;
   }
 
@@ -453,11 +448,11 @@ html {
 }
 
 @keyframes blink-eye-bright {
-  45%, 55% {
+  48%, 52% {
     height: 0.17rem;
   }
 
-  48%, 53% {
+  49%, 51% {
     height: 0;
   }
 
@@ -489,4 +484,12 @@ html {
   50%, 70% {
     transform: rotateZ(140deg);
   }
+}
+
+.wave-right {
+  animation: wave-right 2s 1 ease-in-out;
+}
+
+.wave-left {
+  animation: wave-left 2s 1 ease-in-out;
 }
