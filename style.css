@@ -67,7 +67,7 @@ button {
   display: none;
   position: absolute;
   max-width: 15rem;
-  height: 4rem;
+  height: 3rem;
   overflow: hidden;
   bottom: 100%;
   left: 100%;
@@ -553,7 +553,7 @@ button {
 
   25% {
     width: 4rem;
-    height: 4rem;
+    height: 3rem;
   }
   50% {
    width:  8rem;
