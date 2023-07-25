@@ -109,8 +109,6 @@ html {
   );
   border-radius: 100%;
 
-  margin-left: 0.3rem;
-  margin-bottom: 0.1rem;
 }
 
 .pupil::after {
